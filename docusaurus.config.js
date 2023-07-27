@@ -7,6 +7,18 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 // import Redocusaurus Config
 const redocusaurus = require("./redocusaurus.config");
 
+/**
+ * Mermaid config
+ * @see {@link https://docusaurus.io/docs/next/markdown-features/diagrams | 公式Docs}
+ * @see {@link https://www.npmjs.com/package/@docusaurus/theme-mermaid | npm}
+ */
+const mermaidConfig = {
+  markdown: {
+    mermaid: true,
+  },
+  themes: ["@docusaurus/theme-mermaid"],
+};
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "My Site",
@@ -34,6 +46,9 @@ const config = {
     defaultLocale: "en",
     locales: ["en"],
   },
+
+  // Diagram support
+  ...mermaidConfig,
 
   presets: [
     [
