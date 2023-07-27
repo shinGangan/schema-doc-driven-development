@@ -4,6 +4,9 @@
 const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
+// import Redocusaurus Config
+const redocusaurus = require("./redocusaurus.config");
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "My Site",
@@ -34,7 +37,7 @@ const config = {
 
   presets: [
     [
-      "classic",
+      "@docusaurus/preset-classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
@@ -56,6 +59,8 @@ const config = {
         },
       }),
     ],
+    // Redocusaurus Config
+    redocusaurus.config,
   ],
 
   themeConfig:
@@ -77,6 +82,7 @@ const config = {
             label: "Tutorial",
           },
           { to: "/blog", label: "Blog", position: "left" },
+          redocusaurus.specItems,
           {
             href: "https://github.com/facebook/docusaurus",
             label: "GitHub",
