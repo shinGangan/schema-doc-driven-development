@@ -31,7 +31,8 @@
     "prev:local": "redocly preview-docs $npm_package_config_source_local",
     "prev:url": "redocly preview-docs $npm_package_config_source_url",
     "lint": "redocly lint $npm_package_config_source_local",
-    "split": "redocly split $npm_package_config_source --outDir=openapi"
+    "split": "redocly split $npm_package_config_source --outDir=openapi",
+    "generate": "zx ./scripts/generate.md"
   },
   "dependencies": {
     "@docusaurus/core": "2.4.1",
