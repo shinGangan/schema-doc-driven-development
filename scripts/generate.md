@@ -34,7 +34,7 @@ const source = require("../package.json").config.source_local;
 /** @type {Config} */
 const config = {
   generatorName: "typescript-axios",
-  outputDirPath: "./dist",
+  outputDirPath: "./output",
   apiPackage: "/api",
   modelPackage: "/model",
   additionalProperties: {
