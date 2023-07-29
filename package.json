@@ -9,7 +9,7 @@
     "url": "https://github.com/Shimpei-GANGAN/schema-doc-driven-development"
   },
   "engines": {
-    "node": ">=16.14"
+    "node": "^16.14.0 | ^18.16.0 || >=20.0.0"
   },
   "config": {
     "source": "./openapi/openapi.yaml",
@@ -32,7 +32,8 @@
     "prev:url": "redocly preview-docs $npm_package_config_source_url",
     "lint": "redocly lint $npm_package_config_source_local",
     "split": "redocly split $npm_package_config_source --outDir=openapi",
-    "generate": "zx ./scripts/generate.md"
+    "generate": "zx ./scripts/generate.md",
+    "start:mock": "prism mock $npm_package_config_source_local"
   },
   "dependencies": {
     "@docusaurus/core": "2.4.1",
@@ -48,6 +49,7 @@
   "devDependencies": {
     "@docusaurus/module-type-aliases": "2.4.1",
     "@docusaurus/theme-mermaid": "^2.4.1",
+    "@stoplight/prism-cli": "^5.2.0",
     "@tsconfig/docusaurus": "^1.0.5",
     "redocusaurus": "^1.6.3",
     "typescript": "^4.7.4",
