@@ -58,7 +58,6 @@ const concatAdditionalProperties = (target) => {
   for (const [key, value] of Object.entries(target)) {
     _options.push(`${key}=${value}`);
   }
-  console.log("options: ", _options);
   return _options.join(",");
 };
 ```
