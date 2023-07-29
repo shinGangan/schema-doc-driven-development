@@ -1,5 +1,8 @@
 // @ts-check
 
+// @ts-ignore
+const spec = require("./package.json").config.source_url;
+
 /**
  * API Docsのパス
  * @type {string}
@@ -24,7 +27,7 @@ const route = "/api";
  */
 const specs = [
   {
-    spec: "https://redocly.github.io/redoc/openapi.yaml",
+    spec,
     route,
   },
 ];
