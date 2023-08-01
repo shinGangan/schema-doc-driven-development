@@ -9,7 +9,7 @@
     "url": "https://github.com/Shimpei-GANGAN/schema-doc-driven-development"
   },
   "engines": {
-    "node": "^16.14.0 | ^18.16.0 || >=20.0.0"
+    "node": "^16.14.0 || ^18.16.0 || >=20.0.0"
   },
   "config": {
     "source": "./openapi/openapi.yaml",
